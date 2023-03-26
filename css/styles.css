@@ -1,0 +1,165 @@
+/*padding - space between the text and the edge where the border starts
+  margin - buffer zone/space between our current element and any other element present on the screen*/
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #EAF6F6
+}
+body {
+    color: #40514E;
+    margin: 0;/*all four sides would be set to 0px for it's margin property and we also don't need to specify property such as px*/
+    text-align: center;/*this property has to be inside the parent container, so in this case either inside the top container or the body. Does not work with block elements with width set*/
+    font-family: 'Merriweather', serif;
+    /*what this line does is, it asks the browser to try to render the text in verdana font. If for some reason, the browser or the OS that the user is using doesn't have this font installed, then it will default to whatever the sans-serif font is installed in the system. That means on somebody else's system they might be getting completely different style with different font height and maybe just a completely different look and feel. That's where web safe fonts come in really handy. It is a set of font-families which most OS would be able to render it correctly. To ensure that everyone has the same viewing experience of our website with regards to the fonts, then for that we use font embedding*/
+}
+h1 {
+    color: #66BFBF;
+    font-size: 5.625rem;
+    /* to make font size dynamic, set the unit to % or em. Relation is 16px = 100% = 1em.So 90px = 562.5% or 5.625 em. Thus the font size will scale dynamically when the user change the font size setting in the browser. If the font size is in em or %, then it gets inherited and added on top of whatever it got from it's parent. Suppose we declare font size in the body as 2em, then that will be added to the font size declared in h1, because the parent of h1 is body.To avoid this we have rem where r stands for root, it means ignore all the parent settings for the font size and just set this. So use this instead of em, % or px*/
+    margin: 50px auto 0 auto;/*apart from using rem for font size use px fr other prop.*/
+    font-family: 'Sacramento', cursive;
+    /*width: 10%;
+    margin: 0 auto 0 auto; to center any css block element with width set, use margin instead of text-align: center property and to center the element horizontally, set top and bottom margin to 0. https://stackoverflow.com/questions/39428232/h1-wont-center-with-a-set-width. Also it doesn't work with inline and inline-block elements*/
+}
+
+h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+h3 {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    border: 5px dotted lightgray;
+    border-bottom: none;
+    margin: 70px auto;
+    width: 3%; 
+}
+
+p {
+    line-height: 2;
+}
+
+.top-container {
+    background-color: #EAF6F6;
+    position: relative;
+    padding-top: 100px;
+}
+.middle-container {
+    margin: 100px 0;
+}
+
+.intro {
+    width: 40%;
+    margin: auto;
+}
+
+.bottom-container {
+    background-color: #66BFBF;
+    padding: 50px 0 20px;
+}
+
+.pro {
+    text-decoration: underline;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 250px;
+    top: 40px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+
+.skill-row {
+    margin: 100px auto;
+    width: 50%;
+    text-align: left;
+}
+
+.skill-1 {
+    width: 25%;/*scaled down based on the width of their parent*/
+    float: left;/*image floats to the left with the text wrapping around it in order to display both of them on the same line. Only use float for wrapping text.*/
+    margin-right: 30px;
+}
+
+.skill-2 {
+    width: 25%;
+    float: right;/*image floats to the right with the text wrapping around it in order to display both of them on the same line. Use float when it is really really necessary and use it for what it is meant to be and don't use it for positioning*/
+    margin-left: 30px;
+}
+
+/* .skill-1-description {
+    clear: left 
+    it clears the left and prevents it from wrapping anything on the left
+}
+.skill-2-description {
+    clear: right;
+} */
+
+.hello {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.challenge-description {
+    margin-bottom: 30px;
+ }
+
+.contact-message {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    padding-top: 10px;
+    color: #EAF6F6;
+}
+
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 30px auto 50px auto;
+  }
+  
+.btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+}
+
+.footer-link {
+    margin: 10px 20px;
+}
